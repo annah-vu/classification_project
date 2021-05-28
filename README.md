@@ -46,6 +46,7 @@ Target audience for my notebook walkthrough is the Codeup Data Science team.
 5.) a notebook walkthrough presentation with a high-level overview of your project (5 minutes max). You should be prepared to answer follow-up questions about your code, process, tests, model, and findings.
 <br>
 <br>
+<br>
 
 # Pipeline Stages Breakdown
 
@@ -70,6 +71,8 @@ Target audience for my notebook walkthrough is the Codeup Data Science team.
 -Create csv file with the measurement id, the probability of the target values, and the model's prediction for each observation in my test dataset.
 
 -Document conclusions, takeaways, and next steps in the Final Report Notebook.
+<br>
+<br>
 
 ## Plan -> Acquire -> Prepare -> Explore -> Model -> Deliver
 
@@ -82,12 +85,16 @@ Target audience for my notebook walkthrough is the Codeup Data Science team.
 -Complete some initial data summarization (.info(), .describe(), .value_counts(), ...).
 
 - Plot distributions of individual variables.
+<br>
+<br>
 
 ## Plan -> Acquire -> Prepare -> Explore -> Model -> Deliver
 
 -Store functions needed to prepare the iris data; make sure the module contains the necessary imports to run the code. The final function should do the following: Split the data into train/validate/test. - Handle any missing values. - Handle erroneous data and/or outliers that need addressing. - Encode variables as needed. - Create any new features, if made for this project.
 
 -Import the prepare function from the prepare.py module and use it to prepare the data in the Final Report Notebook.
+<br>
+<br>
 
 
 ## Plan -> Acquire -> Prepare -> Explore -> Model -> Deliver
@@ -99,6 +106,8 @@ Target audience for my notebook walkthrough is the Codeup Data Science team.
 - Create visualizations and run statistical tests that work toward discovering variable relationships (independent with independent and independent with dependent). The goal is to identify features that are related to species (the target), identify any data integrity issues, and understand 'how the data works'. If there appears to be some sort of interaction or correlation, assume there is no causal relationship and brainstorm (and document) ideas on reasons there could be correlation.
 
 - Summarize my conclusions, provide clear answers to my specific questions, and summarize any takeaways/action plan from the work above.
+<br>
+<br>
 
 ## Plan -> Acquire -> Prepare -> Explore -> Model -> Deliver
 
@@ -123,6 +132,8 @@ Target audience for my notebook walkthrough is the Codeup Data Science team.
 -Walk Codeup Data Science Team through the analysis I did to answer my questions and that lead to my findings. (Visualize relationships and Document takeaways.)
 
 -Clearly call out the questions and answers I am analyzing as well as offer insights and recommendations based on my findings.
+<br>
+<br>
 
 ## Data Dictionary
 - tenure = customer tenure in months
