@@ -48,16 +48,64 @@ Target audience for my notebook walkthrough is the Codeup Data Science team.
 <br>
 
 ## Data Dictionary
-is_senior_citizen =	0 signifies a senior-aged customer, 1 signifies a customer younger than the senior age
-customer_id	= company assigned identification number
-gender=	Male for customers that identify as male, Female for customers that identify as female
-is_female = 1 if customer is female, 0 if not.
-partner	= No indicates customer is single, Yes indicates customer has a partner
-dependents=	Yes indicates customer has at least 1 dependent(s), No indicates customer has no dependents
-phone_service=	1 indicates customer has phone service, else 0.
-internet_service=	1 indicates customer has internet service, else 0.
-contract_type=	0 - month-to-month, 1 - 1 year, 2- 2 year
-payment type=	payment method of charges for the customer
-total_charges=	total amount charged to customer account historically
-monthly_charges	=bill total for each month with current service
-churn= Yes indicates customer has left, No indicates customer is still using our services
+- tenure = customer tenure in months
+- 
+-is_senior_citizen =	0 signifies a senior-aged customer, 1 signifies a customer younger than the senior age
+
+-customer_id	= company assigned identification number
+
+-gender=	Male for customers that identify as male, Female for customers that identify as female
+
+-is_female = 1 if customer is female, 0 if not.
+
+-partner	= No indicates customer is single, Yes indicates customer has a partner
+
+-dependents=	Yes indicates customer has at least 1 dependent(s), No indicates customer has no dependents
+
+-phone_service=	1 indicates customer has phone service, else 0.
+
+-multiple_lines = 1 if the customer is using multiple phone lines, 0 if not.
+
+-online_security = 1 if customer has online security, 0 if not.
+
+-device_protection = 1 if customer has device protection, 0 if not.
+
+-tech_support = 1 if customer has tech support, 0 if not.
+
+-streaming_tv = 1 if customer is streaming tv, 0 if not. 
+
+-streaming_movies = 1 if customer is streaming movies, 0 if not.
+
+-paperless_billing = 1 if customer is enrolled in paperless billing, 0 if not. 
+
+-dsl = 1 if customer uses dsl
+
+-fiber_optic = 1 if customer uses fiber optic
+
+-internet_service=	1 indicates customer has internet service, else 0.
+
+-contract_type=	0 - month-to-month, 1 - 1 year, 2- 2 year
+
+-monthly = 1 if customer is a monthly contracted customer, 0 if else.
+
+-one_year = 1 if customer is a 1 year contracted customer, 0 if else.
+
+-two_year = 1 if customer is a 2 year contracted customer, 0 if else. 
+
+-payment type=	payment method of charges for the customer.
+
+-no_internet = 1 if customer has no kind of internet service, 0 if else.
+
+-bank_transfer = 1 if customer pays by bank transfer, 0 if other.
+
+-credit_card = 1 if customer pays with credit card, 0 if other.
+
+-electronic_check = 1 if customer pays with electronic check, 0 if other. 
+
+-mailed_check = 1 if customer pays with mailed check, 0 if other. 
+
+-total_charges=	total amount charged to customer account historically
+
+-monthly_charges	=bill total for each month with current service
+
+-churn= Yes (1) indicates customer has left, No (0) indicates customer is still using our services
