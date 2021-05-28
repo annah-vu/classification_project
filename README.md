@@ -76,7 +76,7 @@ Target audience for my notebook walkthrough is the Codeup Data Science team.
 
 ## Plan -> Acquire -> Prepare -> Explore -> Model -> Deliver
 
--Store functions that are needed to acquire data from the measures and species tables from the iris database on the Codeup data science database server; make sure the acquire.py module contains the necessary imports to run my code.
+-Store functions that are needed to acquire data from the measures and species tables from the telco_churn database on the Codeup data science database server; make sure the acquire.py module contains the necessary imports to run my code.
 
 -The final function will return a pandas DataFrame.
 
@@ -90,7 +90,7 @@ Target audience for my notebook walkthrough is the Codeup Data Science team.
 
 ## Plan -> Acquire -> Prepare -> Explore -> Model -> Deliver
 
--Store functions needed to prepare the iris data; make sure the module contains the necessary imports to run the code. The final function should do the following: Split the data into train/validate/test. - Handle any missing values. - Handle erroneous data and/or outliers that need addressing. - Encode variables as needed. - Create any new features, if made for this project.
+-Store functions needed to prepare the telco_churn data; make sure the module contains the necessary imports to run the code. The final function should do the following: Split the data into train/validate/test. - Handle any missing values. - Handle erroneous data and/or outliers that need addressing. - Encode variables as needed. - Create any new features, if made for this project.
 
 -Import the prepare function from the prepare.py module and use it to prepare the data in the Final Report Notebook.
 <br>
