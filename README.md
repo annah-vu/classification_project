@@ -186,3 +186,15 @@ Target audience for my notebook walkthrough is the Codeup Data Science team.
 -monthly_charges	=bill total for each month with current service
 
 -churn= Yes (1) indicates customer has left, No (0) indicates customer is still using our services
+
+<br>
+<br>
+
+# Reproduce My Project
+
+You will need your own env file with database credentials along with all the necessary files listed below to run my final project notebook.
+
+ Read this README.md
+ Download the aquire.py, prepare.py, and final_report.ipynb files into your working directory
+ Add your own env file to your directory. (user, password, host)
+ Run the final_report.ipynb notebook
