@@ -1,4 +1,5 @@
 # Classification Project - Telco Churn
+-Welcome to my first machine learning project! 
 Project Description: machine learning project for telco churn
 
 ## Project Objectives
