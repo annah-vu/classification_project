@@ -75,7 +75,7 @@ Target audience for my notebook walkthrough is the Codeup Data Science team.
 <br>
 <br>
 
-## Plan -> Acquire -> Prepare -> Explore -> Model -> Deliver
+## Plan -> :green_salad: Acquire -> Prepare -> Explore -> Model -> Deliver
 
 -Store functions that are needed to acquire data from the measures and species tables from the telco_churn database on the Codeup data science database server; make sure the acquire.py module contains the necessary imports to run my code.
 
@@ -89,7 +89,7 @@ Target audience for my notebook walkthrough is the Codeup Data Science team.
 <br>
 <br>
 
-## Plan -> Acquire -> Prepare -> Explore -> Model -> Deliver
+## Plan -> Acquire -> :green_salad: Prepare -> Explore -> Model -> Deliver
 
 -Store functions needed to prepare the telco_churn data; make sure the module contains the necessary imports to run the code. The final function should do the following: Split the data into train/validate/test. - Handle any missing values. - Handle erroneous data and/or outliers that need addressing. - Encode variables as needed. - Create any new features, if made for this project.
 
@@ -98,7 +98,7 @@ Target audience for my notebook walkthrough is the Codeup Data Science team.
 <br>
 
 
-## Plan -> Acquire -> Prepare -> Explore -> Model -> Deliver
+## Plan -> Acquire -> Prepare -> :green_salad: Explore -> Model -> Deliver
 
 -Answer key questions, my hypotheses, and figure out the features that can be used in a classification model to best predict the target variable, species.
 
@@ -110,7 +110,7 @@ Target audience for my notebook walkthrough is the Codeup Data Science team.
 <br>
 <br>
 
-## Plan -> Acquire -> Prepare -> Explore -> Model -> Deliver
+## Plan -> Acquire -> Prepare -> Explore -> :green_salad: Model -> Deliver
 
 -Establish a baseline accuracy to determine if having a model is better than no model and train and compare at least 3 different models. Document these steps well.
 
@@ -124,7 +124,7 @@ Target audience for my notebook walkthrough is the Codeup Data Science team.
 
 -Test the final model on the out-of-sample data (the testing dataset), summarize the performance, interpret and document the results.
 
-## Plan -> Acquire -> Prepare -> Explore -> Model -> Deliver
+## Plan -> Acquire -> Prepare -> Explore -> Model -> :green_salad: Deliver
 
 -Introduce myself and my project goals at the very beginning of my notebook walkthrough.
 
