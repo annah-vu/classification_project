@@ -207,6 +207,31 @@ Target audience for my notebook walkthrough is the Codeup Data Science team.
 You will need your own env file with database credentials along with all the necessary files listed below to run my final project notebook.
 
  Read this README.md
- Download the aquire.py, prepare.py, and final_report.ipynb files into your working directory
+ Download the aquire.py, prepare.py, explore.py, and telco_churn_final.ipynb files into your working directory
  Add your own env file to your directory. (user, password, host)
- Run the final_report.ipynb notebook
+ Run the telco_churn_final.ipynb notebook
+
+# Summary
+## Key Takeaways
+ - Some of the best features to predict churn are:
+ - Month-to-month contract
+ - Fiber optic
+ - Electronic check for payment
+ - Two Year contract
+ - Tenure
+I chose my decision tree as my best model, because it had a 92% recall rate, had an accuracy of 80%, and wasn't overfit.
+I believe recall was the best to evaluate on, because we want to predict which customers will stay so we can further focus on the ones that are more likely to leave. If we predicted incorrectly, using recall, the worst case is that they stayed when we predicted they would churn.
+<br>
+<br>
+
+## My Recommendations:
+- ways to make a better impression on the month-to-month customers
+ - look into our fiber optic program
+ - encourage customers to use other payment types that are not e-checks
+ - incentive for two year contracts
+ <br>
+
+## Next Steps
+ - Adjust hyperparameters, use more features, and use more models
+ - Conduct research for the recommendations
+ - Look more into my quantitative variables
