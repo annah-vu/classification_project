@@ -1,0 +1,44 @@
+import matplotlib.pyplot as plt
+import seaborn as sns
+def get_obj_stats(df):
+    for i in obj_vars:
+        sns.countplot(data=df, hue=i , x = target) 
+        plt.show()
+    
+def get_num_stats(df):
+    for i in num_vars:
+        sns.countplot(data=df, hue=i , x = 'churn') 
+        plt.show()
+
+def countplot(df):
+    for i in df.columns:
+        sns.countplot(data=df, x=i, hue='churn')
+        plt.show()
+
+def get_churn_heatmap(df):
+    plt.figure(figsize=(8,12))
+    churn_heatmap = sns.heatmap(df.corr()[['churn']].sort_values(by='churn', ascending=False), vmin=-.5, vmax=.5, annot=True)
+    churn_heatmap.set_title('Features Correlated with Churn')
+    
+    return churn_heatmap
+
+def get_metrics_binary(clf):
+    '''
+    get_metrics_binary takes in a confusion matrix (cnf) for a binary classifier and prints out metrics based on
+    values in variables named X_train, y_train, and y_pred.
+    
+    return: a classification report as a transposed DataFrame
+    '''
+    accuracy = clf.score(X_train, y_train)
+    class_report = pd.DataFrame(classification_report(y_train, y_pred, output_dict=True)).T
+    conf = confusion_matrix(y_train, y_pred)
+    tpr = conf[1][1] / conf[1].sum()
+    fpr = conf[0][1] / conf[0].sum()
+    tnr = conf[0][0] / conf[0].sum()
+    fnr = conf[1][0] / conf[1].sum()
+    print(f'''
+    The accuracy for our model is {accuracy:.4}
+    The True Positive Rate is {tpr:.3}, The False Positive Rate is {fpr:.3},
+    The True Negative Rate is {tnr:.3}, and the False Negative Rate is {fnr:.3}
+    ''')
+    return class_report
