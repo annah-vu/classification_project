@@ -51,7 +51,7 @@ Target audience for my notebook walkthrough is the Codeup Data Science team.
 
 # Pipeline Stages Breakdown
 
-## Plan -> Acquire -> Prepare -> Explore -> Model -> Deliver
+## :green_salad: Plan -> Acquire -> Prepare -> Explore -> Model -> Deliver
 
 -Create README.md with data dictionary, project and business goals, come up with initial hypotheses.
 
