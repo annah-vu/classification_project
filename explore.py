@@ -1,23 +1,27 @@
 import matplotlib.pyplot as plt
 import seaborn as sns
 def get_obj_stats(df):
+    '''returns countplots of all object columns'''
     for i in obj_vars:
         sns.countplot(data=df, hue=i , x = target) 
         plt.show()
     
 def get_num_stats(df):
+    '''returns count plots of all numeric columns'''
     for i in num_vars:
         sns.countplot(data=df, hue=i , x = 'churn') 
         plt.show()
 
 def countplot(df):
+    '''returns countplots of all columns in dataframe'''
     for i in df.columns:
         sns.countplot(data=df, x=i, hue='churn')
         plt.show()
 
 def get_churn_heatmap(df):
+    '''returns a beautiful heatmap with correlations'''
     plt.figure(figsize=(8,12))
-    churn_heatmap = sns.heatmap(df.corr()[['churn']].sort_values(by='churn', ascending=False), vmin=-.5, vmax=.5, annot=True)
+    churn_heatmap = sns.heatmap(df.corr()[['churn']].sort_values(by='churn', ascending=False), vmin=-.5, vmax=.5, annot=True,cmap='flare')
     churn_heatmap.set_title('Features Correlated with Churn')
     
     return churn_heatmap
@@ -29,6 +33,12 @@ def get_metrics_binary(clf):
     
     return: a classification report as a transposed DataFrame
     '''
+    X_train, y_train = train[x_col], train[y_col]
+
+    X_validate, y_validate = validate[x_col], validate[y_col]
+
+    X_test, y_test = test[x_col], validate[y_col]
+
     accuracy = clf.score(X_train, y_train)
     class_report = pd.DataFrame(classification_report(y_train, y_pred, output_dict=True)).T
     conf = confusion_matrix(y_train, y_pred)
@@ -42,3 +52,9 @@ def get_metrics_binary(clf):
     The True Negative Rate is {tnr:.3}, and the False Negative Rate is {fnr:.3}
     ''')
     return class_report
+
+    X_train, y_train = train[x_col], train[y_col]
+
+    X_validate, y_validate = validate[x_col], validate[y_col]
+
+    X_test, y_test = test[x_col], validate[y_col]
