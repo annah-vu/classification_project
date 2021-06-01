@@ -23,11 +23,16 @@ def num_distributions(df):
             plt.show()
 
 def clean_telco_churn(df):
+    '''cleans our telco churn data for us, and makes dummies'''
+    #df.replace('', np.nan, regex = True)
+    #is.na.sum()
+    #total_charges had 11 null values. I changed them into a float, and filled nulls with the mean of all total charges.
     df.total_charges = pd.to_numeric(df.total_charges, errors='coerce').astype('float64')
     df.total_charges = df.total_charges.fillna(value=df.total_charges.mean()).astype('float64')
     df.replace('No internet service', 'No', inplace=True)
     df.replace('No phone service', 'No', inplace = True)
 
+    #making dummies for columns I found appropriate to do so. I just went down the list. 
     df["is_female"] = df.gender == "Female"
     df['is_female'] = (df['is_female']).astype(int)
 
@@ -67,9 +72,10 @@ def clean_telco_churn(df):
     df["tech_support"] = df.tech_support == "Yes"
     df['tech_support'] = (df['tech_support']).astype(int)
 
+    #dropping redundant columns
     df = df.drop(columns =['payment_type_id', 'contract_type_id', 'internet_service_type_id'])
-    df = df.drop(columns=['customer_id', 'gender'])
-
+    df = df.drop(columns=['gender'])
+    #making a dummy df, and combining it back to the original df. Dropping redundant columns again.
     dummy_df = pd.get_dummies(df[['internet_service_type', 'contract_type','payment_type']], drop_first=False)
     dummy_df = dummy_df.rename(columns={'internet_service_type_DSL': 'dsl',
                                    'internet_service_type_Fiber optic': 'fiber_optic',
@@ -88,6 +94,7 @@ def clean_telco_churn(df):
 
 
 def telco_churn_split(df):
+    #splitting our data
     train_validate, test = train_test_split(df, test_size=.2, 
                                         random_state=123, 
                                         stratify=df.churn)
@@ -98,7 +105,34 @@ def telco_churn_split(df):
 
 
 def prep_telco_churn(df):
+    #cleaning and splitting our data
     df = clean_telco_churn(df)
     train, validate, test = telco_churn_split(df)
     return train, validate, test
 
+def get_metrics_binary(clf):
+    '''
+    get_metrics_binary takes in a confusion matrix (cnf) for a binary classifier and prints out metrics based on
+    values in variables named X_train, y_train, and y_pred.
+    
+    return: a classification report as a transposed DataFrame
+    '''
+    X_train, y_train = train[x_col], train[y_col]
+
+    X_validate, y_validate = validate[x_col], validate[y_col]
+
+    X_test, y_test = test[x_col], validate[y_col]
+    
+    accuracy = clf.score(X_train, y_train)
+    class_report = pd.DataFrame(classification_report(y_train, y_pred, output_dict=True)).T
+    conf = confusion_matrix(y_train, y_pred)
+    tpr = conf[1][1] / conf[1].sum()
+    fpr = conf[0][1] / conf[0].sum()
+    tnr = conf[0][0] / conf[0].sum()
+    fnr = conf[1][0] / conf[1].sum()
+    print(f'''
+    The accuracy for our model is {accuracy:.4}
+    The True Positive Rate is {tpr:.3}, The False Positive Rate is {fpr:.3},
+    The True Negative Rate is {tnr:.3}, and the False Negative Rate is {fnr:.3}
+    ''')
+    return class_report
