@@ -23,7 +23,7 @@ def new_telco_churn_data():
 
 
 def get_telco_churn_data():
-
+    '''get connection, returns telco_churn into a dataframe and creates a csv for us'''
     if os.path.isfile('telco_churn.csv'):
         df = pd.read_csv('telco_churn.csv', index_col=0)
     else:
